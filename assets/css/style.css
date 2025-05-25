@@ -897,7 +897,7 @@ display: none !important;
 }
 
 .card:hover::before{
-    transition-delay:0.2s ;
+    transition-delay:0.10s ;
 
   transform: scale(40);
 }
