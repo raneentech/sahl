@@ -1845,3 +1845,110 @@ section,
       max-width: 100%;
       object-fit: contain;
     }
+
+
+          /* أنماط مخصصة لضمان مظهر جيد للصور والبطاقات */
+        .opportunities-section {
+            direction: rtl;
+            padding: 60px 0; /* مسافة داخلية علوية وسفلية للقسم */
+            background-color: #f8f9fa; /* لون خلفية خفيف للقسم */
+        }
+        .opportunity-card {
+            border: none; /* إزالة الحدود الافتراضية للبطاقة */
+            border-radius: 15px; /* حواف مستديرة للبطاقة */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* ظل خفيف للبطاقة */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التحويم */
+            height: 100%; /* لضمان نفس الارتفاع للبطاقات */
+            display: flex;
+            flex-direction: column;
+        }
+        .opportunity-card:hover {
+            transform: translateY(-5px); /* رفع البطاقة قليلاً عند التحويم */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* ظل أوضح عند التحويم */
+        }
+        .opportunity-card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            max-height: 325px; /* تحديد أقصى ارتفاع للصور للحفاظ على التناسق */
+            object-fit: cover; /* لضمان تغطية الصورة للمساحة دون تشويه */
+        }
+        .opportunity-card .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* لدفع الأزرار للأسفل */
+            flex-grow: 1; /* لتوسيع جسم البطاقة لملء المساحة المتاحة */
+        }
+        .opportunity-card .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+        .opportunity-card .btn-group {
+            direction: ltr;
+            width: 100%;
+            margin-top: auto; /* لدفع مجموعة الأزرار إلى أسفل جسم البطاقة */
+        }
+        .opportunity-card .btn {
+            font-size: 0.95rem;
+            padding: 10px 15px;
+            border-radius: 8px; /* حواف مستديرة للأزرار */
+            flex-grow: 1; /* لجعل الأزرار تأخذ مساحة متساوية في المجموعة */
+            margin: 5px; /* مسافة بين الأزرار */
+        }
+        .opportunity-card .btn-primary {
+            background-color: #319c8c; /* لون أزرق أساسي */
+            border-color: #349d8c;
+        }
+        .opportunity-card .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .opportunity-card .btn-outline-secondary {
+            color: #6c757d; /* لون رمادي ثانوي */
+            border-color: #6c757d;
+        }
+        .opportunity-card .btn-outline-secondary:hover {
+            background-color: #041077;
+            color: #fff;
+        }
+        /* لتوسيط العنوان الرئيسي للقسم */
+        .opportunities-section h2 {
+            text-align: right;
+            /* font-weight: bold; */
+        }
+
+          /* أنماط إضافية لزر disabled */
+        .opportunity-card .btn.disabled {
+            pointer-events: none; /* يمنع النقرات */
+            opacity: 0.65; /* يقلل الشفافية لجعلها تبدو غير نشطة */
+            cursor: not-allowed; /* تغيير شكل المؤشر */
+            background-color: #e9ecef !important; /* لون خلفية محايد */
+            border-color: #ced4da !important; /* لون حدود محايد */
+            color: #6c757d !important; /* لون نص محايد */
+        }
+
+            /* أنماط الليبل الجديد */
+        .opportunity-status-label {
+            position: absolute;
+            top: 15px; /* مسافة من الأعلى */
+            right: 15px; /* مسافة من اليمين (لأن الاتجاه RTL) */
+            z-index: 10; /* للتأكد من أنه يظهر فوق الصورة */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            color: white; /* لون النص في الليبل */
+        }
+
+        /* ألوان الخلفية لليبل حسب الحالة */
+        .opportunity-status-label.status-ongoing {
+            background-color: #28a745; /* أخضر للجارية */
+        }
+        .opportunity-status-label.status-ended {
+            background-color: #dc3545; /* أحمر للمنتهية */
+        }
+        .opportunity-status-label.status-upcoming {
+            background-color: #ffc107; /* أصفر للقريباً */
+            color: #343a40; /* نص داكن لليبل الأصفر */
+        }
