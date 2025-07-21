@@ -1955,9 +1955,14 @@ section,
 
 
     
+      /* لضمان توسيط المودال في جميع الشاشات */
+  .modal-dialog {
+    margin: auto;
+  }
+
     /* تحسين عرض المودال */
     .modal-xl {
-      max-width: 85%;
+      max-width: 90%;
     }
 
     /* زيادة ارتفاع iframe */
@@ -1977,3 +1982,9 @@ section,
       margin-left: 0;
       margin-right: auto;
     }
+
+  @media (max-width: 576px) {
+    .modal-dialog {
+      margin: 1rem auto; /* للجوال */
+    }
+  }
