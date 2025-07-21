@@ -1952,3 +1952,28 @@ section,
             background-color: #ffc107; /* أصفر للقريباً */
             color: #343a40; /* نص داكن لليبل الأصفر */
         }
+
+
+    
+    /* تحسين عرض المودال */
+    .modal-xl {
+      max-width: 85%;
+    }
+
+    /* زيادة ارتفاع iframe */
+    .modal-body iframe {
+      height: 80vh;
+    }
+
+    /* محاذاة العنوان يمين */
+    .modal-header .modal-title {
+      flex: 1;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    /* زر الإغلاق: أيقونة واضحة */
+    .btn-close {
+      margin-left: 0;
+      margin-right: auto;
+    }
